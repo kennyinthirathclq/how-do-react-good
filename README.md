@@ -114,3 +114,7 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - When using JSX, we must use { } as an escape block for running or referencing Javascript code
 - So we map each value in the array to an <li> item 
 - This syntax is pre ES6, easier for newbie readability but let's use the latest syntax
+
+- Add css by creating a css file
+- import css file in JS
+- apply to <ul> via className
