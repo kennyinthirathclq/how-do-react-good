@@ -101,3 +101,7 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - only show <element> if / else X is true
 - create the <li> items in a <ul> list by mapping an array to <li> items
 
+# Create a List component
+- Start by creating the bare necessities for a React component
+- Add a hello world
+- import in the App.js and render the JSX element
