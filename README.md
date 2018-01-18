@@ -118,3 +118,9 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - Add css by creating a css file
 - import css file in JS
 - apply to <ul> via className
+
+# State management
+- Create the constructor and initialize via super
+- State is a mutable, private variable for exclusive for each instansiation of the <List /> object
+- Defined in key:pair as a map
+- We can now reference the state, let's try chaning the array we display in the list
