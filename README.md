@@ -105,3 +105,12 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - Start by creating the bare necessities for a React component
 - Add a hello world
 - import in the App.js and render the JSX element
+
+- Let's now render an array that can be output to a traditional HTML list
+- Say we have an array
+- We know we will have a <ul> item but want to create an <li> for each element in the array
+
+- JSX to the rescue
+- When using JSX, we must use { } as an escape block for running or referencing Javascript code
+- So we map each value in the array to an <li> item 
+- This syntax is pre ES6, easier for newbie readability but let's use the latest syntax
