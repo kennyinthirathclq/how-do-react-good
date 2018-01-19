@@ -124,6 +124,7 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - State is a mutable, private variable for exclusive for each instansiation of the <List /> object
 - Defined in key:pair as a map
 - We can now reference the state, let's try chaning the array we display in the list
+- Changes happen in realtime without the need to re-render
 
 # Changing state with buttons
 - First we need to create a button
@@ -139,5 +140,15 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - We then read the previous state and map the value to be + 1
 - Then we update the button's onClick to wire the click listener to run this function
 
+# Manipulating HTML rendering and output
+- Let's say we want to display the integer as a dollar as we originally intended
+- There are a few ways we can do this, but we have the power of JS to help us
+  - Remember JSX is essentially a templating language
+  - We can add html outisde the JS var
+  - We can modify the JS var format
+  - We can modify the source array itself
+  - Many ways to do it
 
 
+
+# Performance
