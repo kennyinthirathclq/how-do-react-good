@@ -8,15 +8,24 @@ export default class List extends Component {
     super(props)
 
     this.state = {
-      'prices' : ['$1.00', '$2.00', '$3.00']
+      'prices' : [1,2,3]
     }
+
+    this.upcharge = this.upcharge.bind(this)
+  }
+
+  upcharge() {
+    this.setState(prev => ({'prices' : prev.prices.map(v => v+1)}))
   }
 
   render() {
     return (
-      <ul className='List'>
-        {this.state.prices.map((val, ind) => <li>{val}</li>)}
-      </ul>
+      <div>
+        <ul className='List'>
+          {this.state.prices.map((val, ind) => <li>{val}</li>)}
+        </ul>
+        <button onClick={this.upcharge}>Upcharge $1</button>
+      </div>
     );
   }
 }

@@ -124,3 +124,20 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - State is a mutable, private variable for exclusive for each instansiation of the <List /> object
 - Defined in key:pair as a map
 - We can now reference the state, let's try chaning the array we display in the list
+
+# Changing state with buttons
+- First we need to create a button
+* Side note, returned JSX elements always need to be wrapped in a parent component such as <div> or <span>
+- Let's add the button to increase prices by a dollar on every click as an upcharge
+- First create the button
+
+- Next we need to create the function
+- We'll use React's setState function to mutate the state
+  - Note that it's async
+- for our function to understand this (in relation to the instanition of the object) we need to bind 'this' to it
+(Read up on this in the You Don't Know JS)
+- We then read the previous state and map the value to be + 1
+- Then we update the button's onClick to wire the click listener to run this function
+
+
+
