@@ -8,10 +8,19 @@ export default class List extends Component {
     super(props)
 
     this.state = {
-      'prices' : [1,2,3]
+      'prices' : [1,2,3],
+      'status' : 'unmounted'
     }
 
     this.upcharge = this.upcharge.bind(this)
+  }
+
+  componentWillMount() {
+    setTimeout(() => this.setState({status:'async'}), 3000)
+  }
+
+  componentDidMount() {
+    this.setState({status:'mounted'})
   }
 
   upcharge() {
@@ -21,10 +30,11 @@ export default class List extends Component {
   render() {
     return (
       <div>
+        <h3>Lifecycle Status? {this.state.status} </h3>
         <ul className='List'>
           {this.state.prices.map((val, ind) => <li>${`${val.toFixed(2)}`}</li>)}
         </ul>
-        <button onClick={this.upcharge}>Upcharge $1 {this.props.test}</button>
+        <button onClick={this.upcharge}>Upcharge $1</button>
       </div>
     );
   }

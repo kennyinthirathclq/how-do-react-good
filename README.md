@@ -149,6 +149,32 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
   - We can modify the source array itself
   - Many ways to do it
 
+# Component LifeCycle
+- React components have a series of lifecycle events
+- The general idea is that a component will
+  - Mount
+  - Updat
+  - Unmount
 
+- Mount
+  - Essentially initializing and setting everything up before the first frame render
+  - Majority of the functions are async
 
-# Performance
+- Let's do a loading example to demonstrate lifecycle
+- https://www.codevoila.com/uploads/images/201607/reactjs_component_lifecycle_functions.png
+- Mutate a string at different levels of the lifecycle
+- Initiall set it to unmounted
+- Set to mounted after mounted
+- Change value from the return of a async function
+
+- In will mount you can do your API calls here but they're async
+- We need some placeholder to let the user continue to interact during load or to give some visual indicator
+
+# Render Pitfalls
+- Essentially the entire component will re-render even if it's one small change
+- We want to avoid complex operations that will run everytime it is rendered/updated
+  - Example - We have a table we want to filter
+  - Say we store the data unfiltered but filter during the render
+  - This can get costly may cause loss of silky smooth performance
+- We have to remember that while browsers have come a long way, the performance isn't as far ahead as a native app would be (ignore WebAssembly :D)
+
