@@ -9,10 +9,12 @@ export default class List extends Component {
 
     this.state = {
       'prices' : [1,2,3],
-      'status' : 'unmounted'
+      'status' : 'unmounted',
+      'color' : 'blue'
     }
 
     this.upcharge = this.upcharge.bind(this)
+    this.handleText = this.handleText.bind(this)
   }
 
   componentWillMount() {
@@ -27,14 +29,19 @@ export default class List extends Component {
     this.setState(prev => ({'prices' : prev.prices.map(v => v+1)}))
   }
 
+  handleText(event) {
+    this.setState({'color' : event.target.value})    
+  }
+
   render() {
     return (
       <div>
         <h3>Lifecycle Status? {this.state.status} </h3>
-        <ul className='List'>
+        <ul className='List' style={{color:this.state.color}}>
           {this.state.prices.map((val, ind) => <li>${`${val.toFixed(2)}`}</li>)}
         </ul>
         <button onClick={this.upcharge}>Upcharge $1</button>
+        <input type='text' onChange={this.handleText} value={this.state.color}></input>
       </div>
     );
   }

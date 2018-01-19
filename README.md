@@ -169,3 +169,12 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 
 - In will mount you can do your API calls here but they're async
 - We need some placeholder to let the user continue to interact during load or to give some visual indicator
+
+# Capturing keyboard input
+- Pretty similar to hooking up the button to mutate the state
+- We'll hookup the list's style param to read from the color var stored in state
+- however we need to source our input not from a previous state, but what the JSX element currently has (after typing)
+- eventlisteners almost always return an event parameter which provides info about the element that has been interacted with (this is not a react specific thing)
+- So setup a basic HTML input and use the event item passed in to source the value to update
+
+# Props
