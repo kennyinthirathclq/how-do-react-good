@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header'
 import './List.css';
 
 const HELLO_WORLD = ['Hello','World','!'];
@@ -36,7 +37,7 @@ export default class List extends Component {
   render() {
     return (
       <div>
-        <h3>Lifecycle Status? {this.state.status} </h3>
+        <Header title={`Lifecycle Status? ${this.state.status}`}/>
         <ul className='List' style={{color:this.state.color}}>
           {this.state.prices.map((val, ind) => <li>${`${val.toFixed(2)}`}</li>)}
         </ul>

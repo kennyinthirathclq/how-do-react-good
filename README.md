@@ -178,3 +178,14 @@ It's HTML XML syntax with the ability to use JavaScript to manipulate standard c
 - So setup a basic HTML input and use the event item passed in to source the value to update
 
 # Props
+- Another set of variables for a instansiated component
+- Generally it is passed in by a parent component which could be hardcoded or from the parent's state
+- The value is a unidirectional data flow
+- That is the component receiving the props cannot modify props, only the parent may change what is being passed in for the prop
+- Props are generally used as options or used an input data for Pure Components (a component that does not require a state to manage or does any mutations)
+
+- Let's create a child component to demonstrate the parent-child relationship between state and props
+- Create a Header Component
+- Replace our <h3> HTML
+- Pass in our string (that will eventually change) as a prop
+- This <Header /> component is considered a pure component since given the same input, will always have the same output (i.e. there are no side-effects or anything that can be mutated within that component that would affect output)
