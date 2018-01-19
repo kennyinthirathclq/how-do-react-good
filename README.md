@@ -21,9 +21,9 @@ Windows Alternaive | [.msi Installer](https://nodejs.org/dist/v8.9.4/node-v8.9.4
 
 ## Initialize
 
-`create-react-app ../clq-react-intro`
+`create-react-app ../how-do-react-good`
 
 __OR__
 
 `git checkout init`
-
+`npm install`
